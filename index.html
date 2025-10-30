@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapyCafe - Единственное кафе с капибарами в Красноярске</title>
+    <meta name="description" content="CapyCafe — единственное кафе с капибарами в Красноярске. Наслаждайтесь кофе и общением с дружелюбными животными!">
+    <meta name="keywords" content="кафе с капибарами, Красноярск, кофе, животные, отдых">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="prefetch" href="#capybaras">
+    <link rel="prefetch" href="#rules">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="#FAF9F6" style="margin-right: 10px;">
+                    <circle cx="12" cy="12" r="10" />
+                    <text x="12" y="15" text-anchor="middle" font-size="12">CC</text>
+                </svg>
+                <div class="logo-text">CapyCafe</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">О нас</a></li>
+                    <li><a href="#" class="nav-link" data-page="capybaras">Наши капибары</a></li>
+                    <li><a href="#" class="nav-link" data-page="rules">Правила</a></li>
+                    <li><a href="#" class="nav-link" data-page="contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button" id="open-booking">Забронировать</a>
+        </div>
+    </header>
+
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Единственное кафе с капибарами в Красноярске</h1>
+                <p>Уникальная встреча с самыми дружелюбными гигантами и лучшим кофе</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary" id="open-booking-hero">Забронировать стол</a>
+                    <a href="#" class="btn-secondary nav-link" data-page="rules">Узнать правила</a>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Не просто кофе, а настоящее приключение</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>CapyCafe — это уникальное пространство, где вы можете насладиться premium кофе и понаблюдать за самыми дружелюбными животными на планете — капибарами.</p>
+                        <p>Мы создали это место с любовью к природе и заботой о благополучии наших питомцев. Все капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров.</p>
+                        <p>Наше кафе — это идеальное место для отдыха, релаксации и знакомства с удивительными созданиями природы.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="10.jpg" alt="Интерьер кафе" width="600" height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="capybaras-preview" style="background-color: #f0f0f0;">
+            <div class="container">
+                <h2 class="section-title">Познакомьтесь с нашими добрыми великанами</h2>
+                <div class="capybaras-grid">
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="2.jpg" alt="Капибара Карло" width="280" height="250" loading="lazy" data-src="2.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Карло</h3>
+                            <p>Спокойный философ, обожает медитировать у бассейна и наблюдать за посетителями.</p>
+                        </div>
+                    </div>
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="placeholder.jpg" alt="Капибара Рози" width="280" height="250" loading="lazy" data-src="rosi.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Рози</h3>
+                            <p>Игривая непоседа, всегда рада вниманию и обожает позировать для фото.</p>
+                        </div>
+                    </div>
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="4.jpg" alt="Капибара Бруно" width="280" height="250" loading="lazy" data-src="4.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Бруно</h3>
+                            <p>Наш старожил, мудрый и величественный. Обожает зеленый салат и почесывание за ухом.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Хотите в гости? Всё просто!</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-2h2v2zm0-4h-2V9h2v6z"/>
+                            </svg>
+                        </div>
+                        <h3>Забронируйте визит онлайн</h3>
+                        <p>Выберите удобную дату и время, чтобы избежать очередей.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6.5 10.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Ознакомьтесь с правилами</h3>
+                        <p>Для безопасности наших питомцев и вашего комфорта.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Наслаждайтесь общением</h3>
+                        <p>Получите незабываемые эмоции и вкусный напиток.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Места ограничены, чтобы всем было комфортно</h2>
+                <p>Забронируйте визит прямо сейчас и обеспечьте себе незабываемые впечатления</p>
+                <a href="#" class="btn-primary" id="open-booking-cta">Забронировать визит</a>
+            </div>
+        </section>
+        <p style="color: red;">Тест обновления 30.10.2025</p> <!-- Тестовый текст -->
+    </div>
+
+    <!-- Остальной код остаётся таким же, как в предыдущем ответе -->
+    <div id="about" class="page">
+        <!-- ... -->
+    </div>
+    <div id="capybaras" class="page">
+        <!-- ... -->
+    </div>
+    <div id="rules" class="page">
+        <!-- ... -->
+    </div>
+    <div id="contacts" class="page">
+        <!-- ... -->
+    </div>
+    <footer>
+        <!-- ... -->
+    </footer>
+    <div id="booking-modal" class="modal">
+        <!-- ... -->
+    </div>
+    <script defer>
+        // Навигация между страницами
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageId = this.getAttribute('data-page');
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
+                window.scrollTo(0, 0);
+            });
+        });
+
+        // Модальное окно бронирования
+        const bookingModal = document.getElementById('booking-modal');
+        const openBookingButtons = [
+            document.getElementById('open-booking'),
+            document.getElementById('open-booking-hero'),
+            document.getElementById('open-booking-cta'),
+            document.getElementById('open-booking-rules')
+        ];
+        const closeButton = document.querySelector('.close-btn');
+
+        openBookingButtons.forEach(button => {
+            if (button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    bookingModal.style.display = 'flex';
+                });
+            }
+        });
+
+        closeButton.addEventListener('click', function() {
+            bookingModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === bookingModal) {
+                bookingModal.style.display = 'none';
+            }
+        });
+
+        // Обработка формы бронирования
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+            if (!name || !phone || !date || !time || !guests) {
+                alert('Пожалуйста, заполните все обязательные поля');
+                return;
+            }
+            alert(`Спасибо, ${name}! Ваш столик на ${guests} гостей забронирован на ${date} в ${time}. Мы свяжемся с вами для подтверждения.`);
+            bookingModal.style.display = 'none';
+            this.reset();
+        });
+
+        // Установка минимальной даты для бронирования
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+
+        // Intersection Observer для ленивой загрузки
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img[loading='lazy']");
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            images.forEach(img => observer.observe(img));
+        });
+
+        // RequestAnimationFrame для анимаций
+        function animateHover(element, callback) {
+            requestAnimationFrame(() => requestAnimationFrame(() => callback()));
+        }
+        document.querySelectorAll('.capybara-card').forEach(card => {
+            card.addEventListener('mouseover', () => animateHover(card, () => card.style.transform = 'translateY(-5px)'));
+            card.addEventListener('mouseout', () => animateHover(card, () => card.style.transform = 'translateY(0)'));
+        });
+    </script>
+<p style="color: red;">Тест обновления 30.10.2025</p>
+</body>
+</html>
