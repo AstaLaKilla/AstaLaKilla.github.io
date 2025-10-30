@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('6.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://broken-image-server.com/hero-bg.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -406,6 +406,105 @@ footer {
     display: block;
 }
 
+.page-padding {
+    padding: 120px 0 80px;
+}
+
+.section-bg {
+    background-color: #f0f0f0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.rules-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rules-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.rules-title {
+    color: #6B8E23;
+    margin-bottom: 20px;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.rules-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.rules-list li i {
+    color: #6B8E23;
+    position: absolute;
+    left: 0;
+}
+
+.rules-subtitle {
+    color: #6B8E23;
+    margin: 30px 0 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-title {
+    color: #6B8E23;
+    margin-bottom: 15px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contacts-info, .contacts-map {
+    padding: 20px 0;
+}
+
+.contacts-title {
+    color: #6B8E23;
+    margin-bottom: 20px;
+}
+
 .map-container {
     background-color: #f0f0f0;
     height: 200px;
@@ -425,23 +524,29 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+    
     nav ul {
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
+    
     nav ul li {
         margin: 5px 10px;
     }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
+    
     .hero p {
         font-size: 1.2rem;
     }
+    
     .about-content {
         flex-direction: column;
     }
+    
     .steps {
         flex-direction: column;
         align-items: center;
