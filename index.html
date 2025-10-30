@@ -36,6 +36,7 @@
         .about-content{display:flex;align-items:center;gap:40px}
         .about-text{flex:1}
         .about-image{flex:1;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+        .about-image img{width:100%;height:auto;display:block}
         .capybaras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
         .capybara-card{background-color:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}
         .capybara-card:hover{transform:translateY(-10px)}
@@ -86,7 +87,7 @@
             <nav>
                 <ul>
                     <li><a href="#home" class="nav-link" data-page="home">Главная</a></li>
-                    <li><a href="#about" class="nav-link" data-page="about">О нас</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
                     <li><a href="#capybaras" class="nav-link" data-page="capybaras">Наши капибары</a></li>
                     <li><a href="#rules" class="nav-link" data-page="rules">Правила</a></li>
                     <li><a href="#menu" class="nav-link" data-page="menu">Меню</a></li>
@@ -111,14 +112,16 @@
 
         <section id="about">
             <div class="container">
-                <h1 class="section-title">О нашем кафе</h1>
+                <h2 class="section-title">Не просто кофе, а настоящее приключение</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>CapyCafe в Красноярске — это уникальное пространство, где сибирские традиции встречаются с экзотическими животными.</p>
-                        <p>Мы создали уютное место с атмосферой сибирской тайги, где каждый гость может насладиться прекрасным кофе и пообщаться с нашими капибарами.</p>
-                        <p>Наше кафе расположено в самом сердце Красноярска и стало любимым местом отдыха для жителей и гостей города.</p>
+                        <p>CapyCafe — это уникальное пространство, где вы можете насладиться premium кофе и понаблюдать за самыми дружелюбными животными на планете — капибарами.</p>
+                        <p>Мы создали это место с любовью к природе и заботой о благополучии наших питомцев. Все капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров.</p>
+                        <p>Наше кафе — это идеальное место для отдыха, релаксации и знакомства с удивительными созданиями природы.</p>
                     </div>
-                    <div class="about-image"></div> <!-- Пустой контейнер без изображения -->
+                    <div class="about-image">
+                        <img src="10.jpg" alt="Интерьер кафе" loading="lazy" width="100%" height="auto" data-src="10.jpg">
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,7 +204,8 @@
                         <img src="9.jpg" alt="Капибара общается" loading="lazy" width="300" height="250" data-src="9.jpg">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
         <section class="cta-section">
             <div class="container">
@@ -478,6 +482,8 @@
                     document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
                     document.getElementById(pageId).classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    window.location.href = this.getAttribute('href');
                 }
             });
         });
