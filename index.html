@@ -87,7 +87,6 @@
             <nav>
                 <ul>
                     <li><a href="#home" class="nav-link" data-page="home">Главная</a></li>
-                    <li><a href="about.html" class="nav-link">О нас</a></li>
                     <li><a href="#capybaras" class="nav-link" data-page="capybaras">Наши капибары</a></li>
                     <li><a href="#rules" class="nav-link" data-page="rules">Правила</a></li>
                     <li><a href="#menu" class="nav-link" data-page="menu">Меню</a></li>
@@ -482,8 +481,6 @@
                     document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
                     document.getElementById(pageId).classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    window.location.href = this.getAttribute('href');
                 }
             });
         });
