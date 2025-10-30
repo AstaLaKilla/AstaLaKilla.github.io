@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CapyCafe - Кафе с капибарами в Красноярске</title>
+    <title>CapyCafe - О нас</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="prefetch" href="#capybaras" as="document">
-    <link rel="prefetch" href="#rules" as="document">
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
         body{background-color:#FAF9F6;color:#333;line-height:1.6}
@@ -22,36 +20,12 @@
         nav ul li a:hover{color:#87CEEB}
         .cta-button{background-color:#A52A2A;color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}
         .cta-button:hover{background-color:#8B0000}
-        .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://broken-image-server.com/hero-bg.jpg') no-repeat center center/cover;height:80vh;display:flex;align-items:center;text-align:center;color:#fff}
-        .hero-content{max-width:800px;margin:0 auto;padding:20px}
-        .hero h1{font-size:3.5rem;margin-bottom:20px}
-        .hero p{font-size:1.5rem;margin-bottom:30px}
-        .hero-buttons{display:flex;justify-content:center;gap:20px}
-        .btn-primary{background-color:#6B8E23;color:#fff;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}
-        .btn-primary:hover{background-color:#556B2F}
-        .btn-secondary{background-color:transparent;color:#fff;padding:12px 30px;border:2px solid #fff;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}
-        .btn-secondary:hover{background-color:rgba(255,255,255,.2)}
         section{padding:80px 0}
         .section-title{text-align:center;margin-bottom:50px;color:#6B8E23;font-size:2.5rem}
         .about-content{display:flex;align-items:center;gap:40px}
         .about-text{flex:1}
         .about-image{flex:1;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1)}
         .about-image img{width:100%;height:auto;display:block}
-        .capybaras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-        .capybara-card{background-color:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}
-        .capybara-card:hover{transform:translateY(-10px)}
-        .capybara-image{height:250px;overflow:hidden}
-        .capybara-image img{width:100%;height:100%;object-fit:cover;will-change:transform}
-        .capybara-info{padding:20px;text-align:center}
-        .capybara-info h3{color:#6B8E23;margin-bottom:10px}
-        .steps{display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px}
-        .step{text-align:center;max-width:250px}
-        .step-icon{background-color:#87CEEB;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#fff}
-        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
-        .gallery-item{border-radius:10px;overflow:hidden;height:250px}
-        .gallery-item img{width:100%;height:100%;object-fit:cover;will-change:transform}
-        .gallery-item:hover img{transform:scale(1.1)}
-        .cta-section{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('6.jpg') no-repeat center center/cover;text-align:center;color:#fff;padding:100px 0}
         footer{background-color:#6B8E23;color:#fff;padding:50px 0 20px}
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:30px}
         .footer-logo{font-size:1.8rem;font-weight:700;margin-bottom:15px}
@@ -59,22 +33,7 @@
         .footer-social a{color:#fff;font-size:1.5rem;transition:color .3s}
         .footer-social a:hover{color:#87CEEB}
         .footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}
-        .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center}
-        .modal-content{background-color:#fff;padding:30px;border-radius:10px;max-width:500px;width:90%;box-shadow:0 5px 15px rgba(0,0,0,.3)}
-        .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-        .modal-title{font-size:1.5rem;color:#6B8E23}
-        .close-btn{background:none;border:none;font-size:1.5rem;cursor:pointer;color:#333}
-        .form-group{margin-bottom:20px}
-        .form-group label{display:block;margin-bottom:5px;font-weight:500}
-        .form-group input,.form-group select,.form-group textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:5px;font-size:1rem}
-        .form-group textarea{height:100px;resize:vertical}
-        .submit-btn{background-color:#6B8E23;color:#fff;border:none;padding:12px 20px;border-radius:5px;font-size:1rem;cursor:pointer;width:100%;font-weight:700}
-        .submit-btn:hover{background-color:#556B2F}
-        .page{display:none;padding:80px 0}
-        .page.active{display:block}
-        .map-container{background-color:#f0f0f0;height:200px;border-radius:10px;overflow:hidden;margin-top:20px}
-        .map-container img{width:100%;height:100%;object-fit:cover}
-        @media (max-width:768px){.header-content{flex-direction:column;text-align:center}nav ul{margin-top:15px;flex-wrap:wrap;justify-content:center}nav ul li{margin:5px 10px}.hero h1{font-size:2.5rem}.hero p{font-size:1.2rem}.about-content{flex-direction:column}.steps{flex-direction:column;align-items:center}}
+        @media (max-width:768px){.header-content{flex-direction:column;text-align:center}nav ul{margin-top:15px;flex-wrap:wrap;justify-content:center}nav ul li{margin:5px 10px}}
     </style>
 </head>
 <body>
@@ -86,326 +45,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
-                    <li><a href="#about" class="nav-link">О нас</a></li>
-                    <li><a href="#" class="nav-link" data-page="capybaras">Наши капибары</a></li>
-                    <li><a href="#" class="nav-link" data-page="rules">Правила</a></li>
-                    <li><a href="#" class="nav-link" data-page="menu">Меню</a></li>
-                    <li><a href="#" class="nav-link" data-page="contacts">Контакты</a></li>
+                    <li><a href="index.html" class="nav-link" data-page="home">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="index.html#capybaras" class="nav-link" data-page="capybaras">Наши капибары</a></li>
+                    <li><a href="index.html#rules" class="nav-link" data-page="rules">Правила</a></li>
+                    <li><a href="index.html#menu" class="nav-link" data-page="menu">Меню</a></li>
+                    <li><a href="index.html#contacts" class="nav-link" data-page="contacts">Контакты</a></li>
                 </ul>
             </nav>
-            <a href="#" class="cta-button" id="open-booking">Забронировать</a>
+            <a href="index.html#" class="cta-button" id="open-booking">Забронировать</a>
         </div>
     </header>
 
-    <div id="home" class="page active">
-        <section class="hero">
-            <div class="container hero-content">
-                <h1>Единственное кафе с капибарами в Красноярске</h1>
-                <p>Уникальная встреча с самыми дружелюбными гигантами и лучшим кофе</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary" id="open-booking-hero">Забронировать стол</a>
-                    <a href="#" class="btn-secondary nav-link" data-page="rules">Узнать правила</a>
+    <section>
+        <div class="container">
+            <h1 class="section-title">О нашем кафе</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>CapyCafe в Красноярске — это уникальное пространство, где сибирские традиции встречаются с экзотическими животными.</p>
+                    <p>Мы создали уютное место с атмосферой сибирской тайги, где каждый гость может насладиться прекрасным кофе и пообщаться с нашими капибарами.</p>
+                    <p>Наше кафе расположено в самом сердце Красноярска и стало любимым местом отдыха для жителей и гостей города.</p>
                 </div>
+                <div class="about-image"></div> <!-- Пустой контейнер без изображения -->
             </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">Не просто кофе, а настоящее приключение</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>CapyCafe — это уникальное пространство, где вы можете насладиться premium кофе и понаблюдать за самыми дружелюбными животными на планете — капибарами.</p>
-                        <p>Мы создали это место с любовью к природе и заботой о благополучии наших питомцев. Все капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров.</p>
-                        <p>Наше кафе — это идеальное место для отдыха, релаксации и знакомства с удивительными созданиями природы.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="10.jpg" alt="Интерьер кафе" loading="lazy" width="100%" height="auto" data-src="10.jpg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="capybaras-preview" style="background-color: #f0f0f0;">
-            <div class="container">
-                <h2 class="section-title">Познакомьтесь с нашими добрыми великанами</h2>
-                <div class="capybaras-grid">
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="2.jpg" alt="Капибара Карло" loading="lazy" width="280" height="250" data-src="2.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Карло</h3>
-                            <p>Спокойный философ, обожает медитировать у бассейна и наблюдать за посетителями.</p>
-                        </div>
-                    </div>
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="3.jpg" alt="Капибара Рози" loading="lazy" width="280" height="250" data-src="3.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Рози</h3>
-                            <p>Игривая непоседа, всегда рада вниманию и обожает позировать для фото.</p>
-                        </div>
-                    </div>
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="4.jpg" alt="Капибара Бруно" loading="lazy" width="280" height="250" data-src="4.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Бруно</h3>
-                            <p>Наш старожил, мудрый и величественный. Обожает зеленый салат и почесывание за ухом.</p>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="#gallery" class="btn-primary">Узнать больше</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="how-it-works">
-            <div class="container">
-                <h2 class="section-title">Хотите в гости? Всё просто!</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <h3>Забронируйте визит онлайн</h3>
-                        <p>Выберите удобную дату и время, чтобы избежать очередей</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>Ознакомьтесь с правилами</h3>
-                        <p>Для безопасности наших питомцев и вашего комфорта</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <h3>Наслаждайтесь общением</h3>
-                        <p>Получите незабываемые эмоции и вкусный напиток</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" style="background-color: #f0f0f0;">
-            <div class="container">
-                <h2 class="section-title">Моменты счастья в нашем кафе</h2>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="5.jpg" alt="Капибара в кафе" loading="lazy" width="300" height="250" data-src="5.jpg">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="6.jpg" alt="Капибара и кофе" loading="lazy" width="300" height="250" data-src="6.jpg">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="9.jpg" alt="Капибара общается" loading="lazy" width="300" height="250" data-src="9.jpg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <h2>Места ограничены, чтобы всем было комфортно</h2>
-                <p>Забронируйте визит прямо сейчас и обеспечьте себе незабываемые впечатления</p>
-                <a href="#" class="btn-primary" id="open-booking-cta">Забронировать визит</a>
-            </div>
-        </section>
-    </div>
-
-    <div id="about" class="page">
-        <section style="padding: 120px 0 80px;">
-            <div class="container">
-                <h1 class="section-title">О нашем кафе</h1>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>CapyCafe в Красноярске — это уникальное пространство, где сибирские традиции встречаются с экзотическими животными.</p>
-                        <p>Мы создали уютное место с атмосферой сибирской тайги, где каждый гость может насладиться прекрасным кофе и пообщаться с нашими капибарами.</p>
-                        <p>Наше кафе расположено в самом сердце Красноярска и стало любимым местом отдыха для жителей и гостей города.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="10.jpg" alt="Наше кафе" loading="lazy" width="100%" height="auto" data-src="10.jpg">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="capybaras" class="page">
-        <section style="padding: 120px 0 80px;">
-            <div class="container">
-                <h1 class="section-title">Наши капибары</h1>
-                <div class="capybaras-grid">
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="2.jpg" alt="Капибара Карло" loading="lazy" width="280" height="250" data-src="2.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Карло</h3>
-                            <p><strong>Возраст:</strong> 4 года</p>
-                            <p><strong>Характер:</strong> Спокойный философ</p>
-                            <p>Карло обожает наблюдать за гостями и неспешно плавать в бассейне. Он самый старший и мудрый в нашей семье.</p>
-                        </div>
-                    </div>
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="1.jpg" alt="Капибара Рози" loading="lazy" width="280" height="250" data-src="1.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Рози</h3>
-                            <p><strong>Возраст:</strong> 2 года</p>
-                            <p><strong>Характер:</strong> Игривая непоседа</p>
-                            <p>Рози всегда рада вниманию и обожает позировать для фото. Она самая активная и любознательная.</p>
-                        </div>
-                    </div>
-                    <div class="capybara-card">
-                        <div class="capybara-image">
-                            <img src="4.jpg" alt="Капибара Бруно" loading="lazy" width="280" height="250" data-src="4.jpg">
-                        </div>
-                        <div class="capybara-info">
-                            <h3>Бруно</h3>
-                            <p><strong>Возраст:</strong> 3 года</p>
-                            <p><strong>Характер:</strong> Мудрый и величественный</p>
-                            <p>Бруно - наш старожил. Обожает зеленый салат и почесывание за ухом. Он очень общительный и любит внимание.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="rules" class="page">
-        <section style="padding: 120px 0 80px;">
-            <div class="container">
-                <h1 class="section-title">Правила посещения</h1>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <h3 style="color: #6B8E23; margin-bottom: 20px;">Основные правила</h3>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="color: #6B8E23; position: absolute; left: 0;"></i>
-                                <strong>Бронирование обязательно</strong> - мы ограничиваем количество гостей для комфорта животных
-                            </li>
-                            <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="color: #6B8E23; position: absolute; left: 0;"></i>
-                                <strong>Дети до 5 лет</strong> - только в сопровождении родителей и под их постоянным контролем
-                            </li>
-                            <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="color: #6B8E23; position: absolute; left: 0;"></i>
-                                <strong>Не кормите животных</strong> - у них специальная диета, наш персонал покажет, как правильно
-                            </li>
-                            <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="color: #6B8E23; position: absolute; left: 0;"></i>
-                                <strong>Не используйте вспышку</strong> - это пугает животных
-                            </li>
-                            <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="color: #6B8E23; position: absolute; left: 0;"></i>
-                                <strong>Соблюдайте тишину</strong> - громкие звуки вызывают стресс у капибар
-                            </li>
-                        </ul>
-                        <h3 style="color: #6B8E23; margin: 30px 0 20px;">Для безопасности животных и вашего комфорта</h3>
-                        <p>Наши капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров. Мы просим вас соблюдать правила, чтобы визит был приятным для всех.</p>
-                        <div style="text-align: center; margin-top: 30px;">
-                            <a href="#" class="btn-primary" id="open-booking-rules">Забронировать визит</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="menu" class="page">
-        <section style="padding: 120px 0 80px;">
-            <div class="container">
-                <h1 class="section-title">Наше меню</h1>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <h3 style="color: #6B8E23; margin-bottom: 15px;">Кофе и напитки</h3>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Эспрессо</span>
-                                <span>250 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Капучино</span>
-                                <span>320 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Латте</span>
-                                <span>340 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Американо</span>
-                                <span>280 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Чай травяной</span>
-                                <span>200 ₽</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <h3 style="color: #6B8E23; margin-bottom: 15px;">Десерты</h3>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Тирамису</span>
-                                <span>380 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Чизкейк Нью-Йорк</span>
-                                <span>350 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Макарун ассорти</span>
-                                <span>280 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Морковный торт</span>
-                                <span>320 ₽</span>
-                            </li>
-                            <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-                                <span>Круассан</span>
-                                <span>180 ₽</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="contacts" class="page">
-        <section style="padding: 120px 0 80px;">
-            <div class="container">
-                <h1 class="section-title">Контакты</h1>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div>
-                        <h3 style="color: #6B8E23; margin-bottom: 20px;">Наши контакты</h3>
-                        <p><i class="fas fa-map-marker-alt" style="color: #6B8E23; margin-right: 10px;"></i> Красноярск, ул. Енисейская, 15</p>
-                        <p><i class="fas fa-phone" style="color: #6B8E23; margin-right: 10px;"></i> +7 (391) 234-56-78</p>
-                        <p><i class="fas fa-envelope" style="color: #6B8E23; margin-right: 10px;"></i> krasnoyarsk@capycafe.ru</p>
-                        <h3 style="color: #6B8E23; margin: 30px 0 15px;">Часы работы</h3>
-                        <p>Пн-Чт: 10:00 - 22:00</p>
-                        <p>Пт-Сб: 10:00 - 23:00</p>
-                        <p>Вс: 10:00 - 21:00</p>
-                    </div>
-                    <div>
-                        <h3 style="color: #6B8E23; margin-bottom: 20px;">Как добраться</h3>
-                        <p>Мы находимся в центре Красноярска, на берегу Енисея. Рядом остановка "Набережная".</p>
-                        <div class="map-container">
-                            <img src="map.png" alt="Карта расположения кафе" loading="lazy" width="100%" height="200" data-src="map.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -416,7 +80,6 @@
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-vk"></i></a>
                         <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#" class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-hours">
@@ -499,19 +162,7 @@
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const pageId = this.getAttribute('data-page');
-                if (pageId) {
-                    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-                    document.getElementById(pageId).classList.add('active');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    // Обработка ссылок без data-page (например, #about)
-                    const href = this.getAttribute('href');
-                    if (href.startsWith('#')) {
-                        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-                        window.scrollTo({ top: document.querySelector(href).offsetTop, behavior: 'smooth' });
-                    }
-                }
+                window.location.href = this.getAttribute('href');
             });
         });
 
@@ -520,7 +171,6 @@
         const openBookingButtons = [
             document.getElementById('open-booking'),
             document.getElementById('open-booking-hero'),
-            document.getElementById('open-booking-cta'),
             document.getElementById('open-booking-rules')
         ];
         const closeButton = document.querySelector('.close-btn');
@@ -556,49 +206,6 @@
 
         // Установка минимальной даты для бронирования
         document.getElementById('date').min = new Date().toISOString().split('T')[0];
-
-        // Intersection Observer для ленивой загрузки изображений
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute('loading');
-                        observer.unobserve(img);
-                    }
-                });
-            }, { rootMargin: '50px' });
-
-            images.forEach(img => {
-                img.dataset.src = img.getAttribute('data-src');
-                img.src = '';
-                observer.observe(img);
-            });
-        });
-
-        // Анимации с requestAnimationFrame
-        document.querySelectorAll('.capybara-card, .gallery-item').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                let scale = 1;
-                function animate() {
-                    scale += (1.1 - scale) * 0.1;
-                    card.querySelector('img').style.transform = `scale(${scale})`;
-                    if (scale < 1.09) requestAnimationFrame(animate);
-                }
-                requestAnimationFrame(animate);
-            });
-            card.addEventListener('mouseleave', () => {
-                let scale = 1.1;
-                function animateBack() {
-                    scale += (1 - scale) * 0.1;
-                    card.querySelector('img').style.transform = `scale(${scale})`;
-                    if (scale > 1.01) requestAnimationFrame(animateBack);
-                }
-                requestAnimationFrame(animateBack);
-            });
-        });
     </script>
 </body>
 </html>
