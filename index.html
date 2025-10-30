@@ -5,472 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CapyCafe - Кафе с капибарами в Красноярске</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #FAF9F6;
-            color: #333333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: #6B8E23;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            color: #FAF9F6;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            color: #FAF9F6;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #87CEEB;
-        }
-        
-        .cta-button {
-            background-color: #A52A2A;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: #8B0000;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://broken-image-server.com/hero-bg.jpg') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        .btn-primary {
-            background-color: #6B8E23;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #556B2F;
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            padding: 12px 30px;
-            border: 2px solid white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #6B8E23;
-            font-size: 2.5rem;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .capybaras-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .capybara-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .capybara-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .capybara-image {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .capybara-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .capybara-card:hover .capybara-image img {
-            transform: scale(1.1);
-        }
-        
-        .capybara-info {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .capybara-info h3 {
-            color: #6B8E23;
-            margin-bottom: 10px;
-        }
-        
-        .steps {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .step {
-            text-align: center;
-            max-width: 250px;
-        }
-        
-        .step-icon {
-            background-color: #87CEEB;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-        
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 250px;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .cta-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('6.jpg') no-repeat center center/cover;
-            text-align: center;
-            color: white;
-            padding: 100px 0;
-        }
-        
-        footer {
-            background-color: #6B8E23;
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .footer-social a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .footer-social a:hover {
-            color: #87CEEB;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .modal-title {
-            font-size: 1.5rem;
-            color: #6B8E23;
-        }
-        
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #333;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: #6B8E23;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-            font-weight: bold;
-        }
-        
-        .submit-btn:hover {
-            background-color: #556B2F;
-        }
-        
-        .page {
-            display: none;
-            padding: 80px 0;
-        }
-        
-        .page.active {
-            display: block;
-        }
-
-        .map-container {
-            background-color: #f0f0f0;
-            height: 200px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .map-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 5px 10px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .steps {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link rel="prefetch" href="#capybaras" as="document">
+    <link rel="prefetch" href="#rules" as="document">
+    <style>*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:#FAF9F6;color:#333;line-height:1.6}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:#6B8E23;padding:15px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.1)}.header-content{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center}.logo img{height:50px;margin-right:10px}.logo-text{color:#FAF9F6;font-size:24px;font-weight:700}nav ul{display:flex;list-style:none}nav ul li{margin-left:25px}nav ul li a{color:#FAF9F6;text-decoration:none;font-weight:500;transition:color .3s}nav ul li a:hover{color:#87CEEB}.cta-button{background-color:#A52A2A;color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}.cta-button:hover{background-color:#8B0000}.hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://broken-image-server.com/hero-bg.jpg') no-repeat center center/cover;height:80vh;display:flex;align-items:center;text-align:center;color:#fff}.hero-content{max-width:800px;margin:0 auto;padding:20px}.hero h1{font-size:3.5rem;margin-bottom:20px}.hero p{font-size:1.5rem;margin-bottom:30px}.hero-buttons{display:flex;justify-content:center;gap:20px}.btn-primary{background-color:#6B8E23;color:#fff;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}.btn-primary:hover{background-color:#556B2F}.btn-secondary{background-color:transparent;color:#fff;padding:12px 30px;border:2px solid #fff;border-radius:30px;text-decoration:none;font-weight:700;transition:background-color .3s}.btn-secondary:hover{background-color:rgba(255,255,255,.2)}section{padding:80px 0}.section-title{text-align:center;margin-bottom:50px;color:#6B8E23;font-size:2.5rem}.about-content{display:flex;align-items:center;gap:40px}.about-text{flex:1}.about-image{flex:1;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1)}.about-image img{width:100%;height:auto;display:block}.capybaras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}.capybara-card{background-color:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}.capybara-card:hover{transform:translateY(-10px)}.capybara-image{height:250px;overflow:hidden}.capybara-image img{width:100%;height:100%;object-fit:cover;will-change:transform;transition:transform .5s}.capybara-info{padding:20px;text-align:center}.capybara-info h3{color:#6B8E23;margin-bottom:10px}.steps{display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px}.step{text-align:center;max-width:250px}.step-icon{background-color:#87CEEB;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#fff}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}.gallery-item{border-radius:10px;overflow:hidden;height:250px}.gallery-item img{width:100%;height:100%;object-fit:cover;will-change:transform;transition:transform .5s}.gallery-item:hover img{transform:scale(1.1)}.cta-section{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('6.jpg') no-repeat center center/cover;text-align:center;color:#fff;padding:100px 0}footer{background-color:#6B8E23;color:#fff;padding:50px 0 20px}.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:30px}.footer-logo{font-size:1.8rem;font-weight:700;margin-bottom:15px}.footer-social{display:flex;gap:15px;margin-top:15px}.footer-social a{color:#fff;font-size:1.5rem;transition:color .3s}.footer-social a:hover{color:#87CEEB}.footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center}.modal-content{background-color:#fff;padding:30px;border-radius:10px;max-width:500px;width:90%;box-shadow:0 5px 15px rgba(0,0,0,.3)}.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.modal-title{font-size:1.5rem;color:#6B8E23}.close-btn{background:none;border:none;font-size:1.5rem;cursor:pointer;color:#333}.form-group{margin-bottom:20px}.form-group label{display:block;margin-bottom:5px;font-weight:500}.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:5px;font-size:1rem}.form-group textarea{height:100px;resize:vertical}.submit-btn{background-color:#6B8E23;color:#fff;border:none;padding:12px 20px;border-radius:5px;font-size:1rem;cursor:pointer;width:100%;font-weight:700}.submit-btn:hover{background-color:#556B2F}.page{display:none;padding:80px 0}.page.active{display:block}.map-container{background-color:#f0f0f0;height:200px;border-radius:10px;overflow:hidden;margin-top:20px}.map-container img{width:100%;height:100%;object-fit:cover}@media (max-width:768px){.header-content{flex-direction:column;text-align:center}nav ul{margin-top:15px;flex-wrap:wrap;justify-content:center}nav ul li{margin:5px 10px}.hero h1{font-size:2.5rem}.hero p{font-size:1.2rem}.about-content{flex-direction:column}.steps{flex-direction:column;align-items:center}}</style>
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
-                <img src="иконка.png" alt="CapyCafe Logo">
+                <img src="иконка.png" alt="CapyCafe Logo" width="50" height="50">
                 <div class="logo-text">CapyCafe</div>
             </div>
-            
             <nav>
                 <ul>
                     <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
@@ -481,7 +26,6 @@
                     <li><a href="#" class="nav-link" data-page="contacts">Контакты</a></li>
                 </ul>
             </nav>
-            
             <a href="#" class="cta-button" id="open-booking">Забронировать</a>
         </div>
     </header>
@@ -508,7 +52,7 @@
                         <p>Наше кафе — это идеальное место для отдыха, релаксации и знакомства с удивительными созданиями природы.</p>
                     </div>
                     <div class="about-image">
-                        <img src="10.jpg" alt="Интерьер кафе">
+                        <img src="10.jpg" alt="Интерьер кафе" loading="lazy" width="100%" height="auto">
                     </div>
                 </div>
             </div>
@@ -520,27 +64,25 @@
                 <div class="capybaras-grid">
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="2.jpg" alt="Капибара Карло">
+                            <img src="2.jpg" alt="Капибара Карло" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Карло</h3>
                             <p>Спокойный философ, обожает медитировать у бассейна и наблюдать за посетителями.</p>
                         </div>
                     </div>
-                    
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="1.jpg" alt="Капибара Рози">
+                            <img src="3.jpg" alt="Капибара Рози" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Рози</h3>
                             <p>Игривая непоседа, всегда рада вниманию и обожает позировать для фото.</p>
                         </div>
                     </div>
-                    
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="4.jpg" alt="Капибара Бруно">
+                            <img src="4.jpg" alt="Капибара Бруно" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Бруно</h3>
@@ -565,7 +107,6 @@
                         <h3>Забронируйте визит онлайн</h3>
                         <p>Выберите удобную дату и время, чтобы избежать очередей</p>
                     </div>
-                    
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-book"></i>
@@ -573,7 +114,6 @@
                         <h3>Ознакомьтесь с правилами</h3>
                         <p>Для безопасности наших питомцев и вашего комфорта</p>
                     </div>
-                    
                     <div class="step">
                         <div class="step-icon">
                             <i class="fas fa-coffee"></i>
@@ -590,13 +130,13 @@
                 <h2 class="section-title">Моменты счастья в нашем кафе</h2>
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="5.jpg" alt="Капибара в кафе">
+                        <img src="5.jpg" alt="Капибара в кафе" loading="lazy" width="300" height="250">
                     </div>
                     <div class="gallery-item">
-                        <img src="6.jpg" alt="Капибара и кофе">
+                        <img src="6.jpg" alt="Капибара и кофе" loading="lazy" width="300" height="250">
                     </div>
                     <div class="gallery-item">
-                        <img src="9.jpg" alt="Капибара общается">
+                        <img src="9.jpg" alt="Капибара общается" loading="lazy" width="300" height="250">
                     </div>
                 </div>
             </div>
@@ -622,7 +162,7 @@
                         <p>Наше кафе расположено в самом сердце Красноярска и стало любимым местом отдыха для жителей и гостей города.</p>
                     </div>
                     <div class="about-image">
-                        <img src="10.jpg" alt="Наше кафе">
+                        <img src="10.jpg" alt="Наше кафе" loading="lazy" width="100%" height="auto">
                     </div>
                 </div>
             </div>
@@ -636,7 +176,7 @@
                 <div class="capybaras-grid">
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="2.jpg" alt="Капибара Карло">
+                            <img src="2.jpg" alt="Капибара Карло" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Карло</h3>
@@ -645,10 +185,9 @@
                             <p>Карло обожает наблюдать за гостями и неспешно плавать в бассейне. Он самый старший и мудрый в нашей семье.</p>
                         </div>
                     </div>
-                    
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="3.jpg" alt="Капибара Рози">
+                            <img src="1.jpg" alt="Капибара Рози" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Рози</h3>
@@ -657,10 +196,9 @@
                             <p>Рози всегда рада вниманию и обожает позировать для фото. Она самая активная и любознательная.</p>
                         </div>
                     </div>
-                    
                     <div class="capybara-card">
                         <div class="capybara-image">
-                            <img src="4.jpg" alt="Капибара Бруно">
+                            <img src="4.jpg" alt="Капибара Бруно" loading="lazy" width="280" height="250">
                         </div>
                         <div class="capybara-info">
                             <h3>Бруно</h3>
@@ -703,10 +241,8 @@
                                 <strong>Соблюдайте тишину</strong> - громкие звуки вызывают стресс у капибар
                             </li>
                         </ul>
-                        
                         <h3 style="color: #6B8E23; margin: 30px 0 20px;">Для безопасности животных и вашего комфорта</h3>
                         <p>Наши капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров. Мы просим вас соблюдать правила, чтобы визит был приятным для всех.</p>
-                        
                         <div style="text-align: center; margin-top: 30px;">
                             <a href="#" class="btn-primary" id="open-booking-rules">Забронировать визит</a>
                         </div>
@@ -746,7 +282,6 @@
                             </li>
                         </ul>
                     </div>
-                    
                     <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                         <h3 style="color: #6B8E23; margin-bottom: 15px;">Десерты</h3>
                         <ul style="list-style-type: none; padding-left: 0;">
@@ -787,18 +322,16 @@
                         <p><i class="fas fa-map-marker-alt" style="color: #6B8E23; margin-right: 10px;"></i> Красноярск, ул. Енисейская, 15</p>
                         <p><i class="fas fa-phone" style="color: #6B8E23; margin-right: 10px;"></i> +7 (391) 234-56-78</p>
                         <p><i class="fas fa-envelope" style="color: #6B8E23; margin-right: 10px;"></i> krasnoyarsk@capycafe.ru</p>
-                        
                         <h3 style="color: #6B8E23; margin: 30px 0 15px;">Часы работы</h3>
                         <p>Пн-Чт: 10:00 - 22:00</p>
                         <p>Пт-Сб: 10:00 - 23:00</p>
                         <p>Вс: 10:00 - 21:00</p>
                     </div>
-                    
                     <div>
                         <h3 style="color: #6B8E23; margin-bottom: 20px;">Как добраться</h3>
                         <p>Мы находимся в центре Красноярска, на берегу Енисея. Рядом остановка "Набережная".</p>
                         <div class="map-container">
-                            <img src="карта.png" alt="Карта расположения кафе">
+                            <img src="map.png" alt="Карта расположения кафе" loading="lazy" width="100%" height="200">
                         </div>
                     </div>
                 </div>
@@ -818,14 +351,12 @@
                         <a href="https://broken-instagram-link.net"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-hours">
                     <h3>Часы работы</h3>
                     <p>Пн-Чт: 10:00 - 22:00</p>
                     <p>Пт-Сб: 10:00 - 23:00</p>
                     <p>Вс: 10:00 - 21:00</p>
                 </div>
-                
                 <div class="footer-contact">
                     <h3>Контакты</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Красноярск, ул. Енисейская, 15</p>
@@ -833,14 +364,12 @@
                     <p><i class="fas fa-envelope"></i> krasnoyarsk@capycafe.ru</p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 CapyCafe Красноярск. Все права защищены. Мы обеспечиваем высочайший уровень благополучия наших животных.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Модальное окно бронирования -->
     <div id="booking-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -903,17 +432,11 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const pageId = this.getAttribute('data-page');
-                
                 if (pageId) {
-                    // Скрыть все страницы
                     document.querySelectorAll('.page').forEach(page => {
                         page.classList.remove('active');
                     });
-                    
-                    // Показать выбранную страницу
                     document.getElementById(pageId).classList.add('active');
-                    
-                    // Прокрутка к верху страницы
                     window.scrollTo(0, 0);
                 }
             });
@@ -929,7 +452,6 @@
         ];
         const closeButton = document.querySelector('.close-btn');
 
-        // Открытие модального окна
         openBookingButtons.forEach(button => {
             if (button) {
                 button.addEventListener('click', function(e) {
@@ -939,12 +461,10 @@
             }
         });
 
-        // Закрытие модального окна
         closeButton.addEventListener('click', function() {
             bookingModal.style.display = 'none';
         });
 
-        // Закрытие при клике вне модального окна
         window.addEventListener('click', function(e) {
             if (e.target === bookingModal) {
                 bookingModal.style.display = 'none';
@@ -954,33 +474,66 @@
         // Обработка формы бронирования
         document.getElementById('booking-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
             const guests = document.getElementById('guests').value;
-            
-            // Простая валидация
             if (!name || !phone || !date || !time || !guests) {
                 alert('Пожалуйста, заполните все обязательные поля');
                 return;
             }
-            
-            // Имитация отправки данных
             alert(`Спасибо, ${name}! Ваш столик на ${guests} гостей забронирован на ${date} в ${time}. Мы свяжемся с вами по телефону ${phone} для подтверждения.`);
-            
-            // Закрытие модального окна и сброс формы
             bookingModal.style.display = 'none';
             this.reset();
         });
 
-        // Установка минимальной даты для бронирования (сегодня)
+        // Установка минимальной даты для бронирования
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('date').min = today;
+
+        // Intersection Observer для ленивой загрузки изображений
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('loading');
+                        observer.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+
+            images.forEach(img => {
+                img.dataset.src = img.src;
+                img.src = '';
+                observer.observe(img);
+            });
+        });
+
+        // Анимации с requestAnimationFrame
+        document.querySelectorAll('.capybara-card, .gallery-item').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                let scale = 1;
+                function animate() {
+                    scale += (1.1 - scale) * 0.1;
+                    card.querySelector('img').style.transform = `scale(${scale})`;
+                    if (scale < 1.09) requestAnimationFrame(animate);
+                }
+                requestAnimationFrame(animate);
+            });
+            card.addEventListener('mouseleave', () => {
+                let scale = 1.1;
+                function animateBack() {
+                    scale += (1 - scale) * 0.1;
+                    card.querySelector('img').style.transform = `scale(${scale})`;
+                    if (scale > 1.01) requestAnimationFrame(animateBack);
+                }
+                requestAnimationFrame(animateBack);
+            });
+        });
     </script>
 </body>
 </html>
-
-
-
