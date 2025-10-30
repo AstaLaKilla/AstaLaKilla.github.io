@@ -490,17 +490,58 @@
                     document.getElementById(pageId).classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                    // Обновление метатега description при переключении страниц
+                    // Обновление URL с помощью history.pushState
+                    window.history.pushState({}, '', `#${pageId}`);
+
+                    // Обновление метатега description
                     const metaTags = document.getElementsByName('description');
                     metaTags.forEach(tag => {
                         if (tag.getAttribute('data-page') === pageId) {
-                            tag.removeAttribute('data-page'); // Устанавливаем активный тег
+                            tag.removeAttribute('data-page');
                         } else if (!tag.hasAttribute('data-page')) {
-                            tag.setAttribute('data-page', ''); // Делаем остальные неактивными
+                            tag.setAttribute('data-page', '');
                         }
                     });
                 }
             });
+        });
+
+        // Обработка изменения URL (например, при обновлении страницы или использовании кнопок браузера)
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.slice(1); // Убираем # из хэша
+            if (hash) {
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                const page = document.getElementById(hash);
+                if (page) {
+                    page.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Обновление метатега description при возврате по истории
+                    const metaTags = document.getElementsByName('description');
+                    metaTags.forEach(tag => {
+                        if (tag.getAttribute('data-page') === hash) {
+                            tag.removeAttribute('data-page');
+                        } else if (!tag.hasAttribute('data-page')) {
+                            tag.setAttribute('data-page', '');
+                        }
+                    });
+                }
+            } else {
+                document.getElementById('home').classList.add('active');
+            }
+        });
+
+        // Инициализация при загрузке страницы
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                const page = document.getElementById(hash);
+                if (page) {
+                    page.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
         });
 
         // Модальное окно бронирования
