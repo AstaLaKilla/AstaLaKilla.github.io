@@ -7,7 +7,7 @@
     <meta name="description" content="CapyCafe — единственное кафе с капибарами в Красноярске. Наслаждайтесь кофе и общением с дружелюбными животными!">
     <meta name="keywords" content="кафе с капибарами, Красноярск, кофе, животные, отдых">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="styles.min.css?v=2"> <!-- Подключение CSS с версией для обновления -->
     <link rel="prefetch" href="#capybaras">
     <link rel="prefetch" href="#rules">
 </head>
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </section>
-        <section id="capybaras-preview" style="background-color: #f0f0f0;">
+        <section id="capybaras-preview">
             <div class="container">
                 <h2 class="section-title">Познакомьтесь с нашими добрыми великанами</h2>
                 <div class="capybaras-grid">
@@ -132,31 +132,191 @@
             <div class="container">
                 <h2>Места ограничены, чтобы всем было комфортно</h2>
                 <p>Забронируйте визит прямо сейчас и обеспечьте себе незабываемые впечатления</p>
-                <a href="#" class="btn-primary" id="open-booking-cta">Забронировать визит</a>
+                <a href="#" class="cta-button" id="open-booking-cta">Забронировать визит</a>
             </div>
         </section>
-        <p style="color: red;">Тест обновления 30.10.2025</p> <!-- Тестовый текст -->
     </div>
 
-    <!-- Остальной код остаётся таким же, как в предыдущем ответе -->
     <div id="about" class="page">
-        <!-- ... -->
+        <section>
+            <div class="container">
+                <h1 class="section-title">О нашем кафе</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>CapyCafe в Красноярске — это уникальное пространство, где сибирские традиции встречаются с экзотическими животными.</p>
+                        <p>Мы создали уютное место с атмосферой сибирской тайги, где каждый гость может насладиться прекрасным кофе и пообщаться с нашими капибарами.</p>
+                        <p>Наше кафе расположено в самом сердце Красноярска и стало любимым местом отдыха для жителей и гостей города.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="10.jpg" alt="Наше кафе" width="600" height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
     <div id="capybaras" class="page">
-        <!-- ... -->
+        <section>
+            <div class="container">
+                <h1 class="section-title">Наши капибары</h1>
+                <div class="capybaras-grid">
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="2.jpg" alt="Капибара Карло" width="280" height="250" loading="lazy" data-src="2.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Карло</h3>
+                            <p><strong>Возраст:</strong> 4 года</p>
+                            <p><strong>Характер:</strong> Спокойный философ</p>
+                            <p>Карло обожает наблюдать за гостями и неспешно плавать в бассейне. Он самый старший и мудрый в нашей семье.</p>
+                        </div>
+                    </div>
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="placeholder.jpg" alt="Капибара Рози" width="280" height="250" loading="lazy" data-src="rosi.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Рози</h3>
+                            <p><strong>Возраст:</strong> 2 года</p>
+                            <p><strong>Характер:</strong> Игривая непоседа</p>
+                            <p>Рози всегда рада вниманию и обожает позировать для фото. Она самая активная и любознательная.</p>
+                        </div>
+                    </div>
+                    <div class="capybara-card">
+                        <div class="capybara-image">
+                            <img src="4.jpg" alt="Капибара Бруно" width="280" height="250" loading="lazy" data-src="4.jpg">
+                        </div>
+                        <div class="capybara-info">
+                            <h3>Бруно</h3>
+                            <p><strong>Возраст:</strong> 3 года</p>
+                            <p><strong>Характер:</strong> Мудрый и величественный</p>
+                            <p>Бруно - наш старожил. Обожает зеленый салат и почесывание за ухом. Он очень общительный и любит внимание.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
     <div id="rules" class="page">
-        <!-- ... -->
+        <section>
+            <div class="container">
+                <h1 class="section-title">Правила посещения</h1>
+                <div>
+                    <div>
+                        <h3>Основные правила</h3>
+                        <ul>
+                            <li><strong>Бронирование обязательно</strong> - мы ограничиваем количество гостей для комфорта животных</li>
+                            <li><strong>Дети до 5 лет</strong> - только в сопровождении родителей и под их постоянным контролем</li>
+                            <li><strong>Не кормите животных</strong> - у них специальная диета, наш персонал покажет, как правильно</li>
+                            <li><strong>Не используйте вспышку</strong> - это пугает животных</li>
+                            <li><strong>Соблюдайте тишину</strong> - громкие звуки вызывают стресс у капибар</li>
+                        </ul>
+                        <p>Для безопасности животных и вашего комфорта наши капибары содержатся в идеальных условиях под постоянным наблюдением ветеринаров. Мы просим вас соблюдать правила, чтобы визит был приятным для всех.</p>
+                        <div>
+                            <a href="#" class="cta-button" id="open-booking-rules">Забронировать визит</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
     <div id="contacts" class="page">
-        <!-- ... -->
+        <section>
+            <div class="container">
+                <h1 class="section-title">Контакты</h1>
+                <div>
+                    <div>
+                        <h3>Наши контакты</h3>
+                        <p>Красноярск, ул. Енисейская, 15</p>
+                        <p>+7 (391) 234-56-78</p>
+                        <p>krasnoyarsk@capycafe.ru</p>
+                        <h3>Часы работы</h3>
+                        <p>Пн-Чт: 10:00 - 22:00</p>
+                        <p>Пт-Сб: 10:00 - 23:00</p>
+                        <p>Вс: 10:00 - 21:00</p>
+                    </div>
+                    <div>
+                        <h3>Как добраться</h3>
+                        <p>Мы находимся в центре Красноярска, на берегу Енисея. Рядом остановка "Набережная".</p>
+                        <div class="map-container">
+                            <img src="карта.png" alt="Карта расположения кафе" width="300" height="200" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
     <footer>
-        <!-- ... -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">CapyCafe Красноярск</div>
+                    <p>Единственное кафе с капибарами в Сибири.</p>
+                </div>
+                <div class="footer-hours">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Чт: 10:00 - 22:00</p>
+                    <p>Пт-Сб: 10:00 - 23:00</p>
+                    <p>Вс: 10:00 - 21:00</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Красноярск, ул. Енисейская, 15</p>
+                    <p>+7 (391) 234-56-78</p>
+                    <p>krasnoyarsk@capycafe.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CapyCafe Красноярск. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
+
     <div id="booking-modal" class="modal">
-        <!-- ... -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Бронирование столика</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <form id="booking-form" name="booking" data-netlify="true">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата посещения</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Время</label>
+                    <select id="time" name="time" required>
+                        <option value="">Выберите время</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Количество гостей</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Выберите количество</option>
+                        <option value="1">1 гость</option>
+                        <option value="2">2 гостя</option>
+                        <option value="3">3 гостя</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Забронировать</button>
+            </form>
+        </div>
     </div>
+
     <script defer>
         // Навигация между страницами
         document.querySelectorAll('.nav-link').forEach(link => {
@@ -188,9 +348,11 @@
             }
         });
 
-        closeButton.addEventListener('click', function() {
-            bookingModal.style.display = 'none';
-        });
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                bookingModal.style.display = 'none';
+            });
+        }
 
         window.addEventListener('click', function(e) {
             if (e.target === bookingModal) {
@@ -199,24 +361,30 @@
         });
 
         // Обработка формы бронирования
-        document.getElementById('booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            const guests = document.getElementById('guests').value;
-            if (!name || !phone || !date || !time || !guests) {
-                alert('Пожалуйста, заполните все обязательные поля');
-                return;
-            }
-            alert(`Спасибо, ${name}! Ваш столик на ${guests} гостей забронирован на ${date} в ${time}. Мы свяжемся с вами для подтверждения.`);
-            bookingModal.style.display = 'none';
-            this.reset();
-        });
+        const bookingForm = document.getElementById('booking-form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const guests = document.getElementById('guests').value;
+                if (!name || !phone || !date || !time || !guests) {
+                    alert('Пожалуйста, заполните все обязательные поля');
+                    return;
+                }
+                alert(`Спасибо, ${name}! Ваш столик на ${guests} гостей забронирован на ${date} в ${time}. Мы свяжемся с вами для подтверждения.`);
+                bookingModal.style.display = 'none';
+                this.reset();
+            });
+        }
 
         // Установка минимальной даты для бронирования
-        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            dateInput.min = new Date().toISOString().split('T')[0];
+        }
 
         // Intersection Observer для ленивой загрузки
         document.addEventListener("DOMContentLoaded", function() {
@@ -232,16 +400,6 @@
             });
             images.forEach(img => observer.observe(img));
         });
-
-        // RequestAnimationFrame для анимаций
-        function animateHover(element, callback) {
-            requestAnimationFrame(() => requestAnimationFrame(() => callback()));
-        }
-        document.querySelectorAll('.capybara-card').forEach(card => {
-            card.addEventListener('mouseover', () => animateHover(card, () => card.style.transform = 'translateY(-5px)'));
-            card.addEventListener('mouseout', () => animateHover(card, () => card.style.transform = 'translateY(0)'));
-        });
     </script>
-<p style="color: red;">Тест обновления 30.10.2025</p>
 </body>
 </html>
