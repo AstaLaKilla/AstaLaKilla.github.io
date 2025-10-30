@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="prefetch" href="#capybaras" as="document">
     <link rel="prefetch" href="#rules" as="document">
+
+    <!-- Метатеги description для каждой страницы -->
+    <meta name="description" content="Единственное кафе с капибарами в Красноярске. Насладитесь уникальным опытом общения с дружелюбными животными и вкусным кофе.">
+    <meta name="description" content="Познакомьтесь с нашими капибарами в CapyCafe Красноярск. Узнайте о Карло, Рози и Бруно — наших добрых великанах." data-page="capybaras">
+    <meta name="description" content="Правила посещения CapyCafe в Красноярске. Узнайте, как безопасно и комфортно провести время с капибарами." data-page="rules">
+    <meta name="description" content="Меню CapyCafe в Красноярске: кофе и десерты премиум-класса для вашего удовольствия." data-page="menu">
+    <meta name="description" content="Контакты CapyCafe в Красноярске. Адрес, часы работы и информация о том, как добраться до кафе с капибарами." data-page="contacts">
+
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
         body{background-color:#FAF9F6;color:#333;line-height:1.6}
@@ -377,7 +385,7 @@
                         <h3 style="color: #6B8E23; margin-bottom: 20px;">Как добраться</h3>
                         <p>Мы находимся в центре Красноярска, на берегу Енисея. Рядом остановка "Набережная".</p>
                         <div class="map-container">
-                            <img src="карта.png" alt="Карта расположения кафе" loading="lazy" width="100%" height="200" data-src="map.png">
+                            <img src="map.png" alt="Карта расположения кафе" loading="lazy" width="100%" height="200" data-src="map.png">
                         </div>
                     </div>
                 </div>
@@ -481,6 +489,16 @@
                     document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
                     document.getElementById(pageId).classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Обновление метатега description при переключении страниц
+                    const metaTags = document.getElementsByName('description');
+                    metaTags.forEach(tag => {
+                        if (tag.getAttribute('data-page') === pageId) {
+                            tag.removeAttribute('data-page'); // Устанавливаем активный тег
+                        } else if (!tag.hasAttribute('data-page')) {
+                            tag.setAttribute('data-page', ''); // Делаем остальные неактивными
+                        }
+                    });
                 }
             });
         });
@@ -572,5 +590,3 @@
     </script>
 </body>
 </html>
-
-
